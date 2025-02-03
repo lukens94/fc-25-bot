@@ -20,18 +20,9 @@ Per eseguire questo bot, avrai bisogno di:
 - Un account Telegram con un bot creato tramite il [BotFather](https://core.telegram.org/bots#botfather).
 - Un account Supabase per la gestione dei dati e delle credenziali.
 
-### Variabili d'Ambiente ⚡
-
-Assicurati di impostare le seguenti variabili d'ambiente nel tuo file `.env`:
-
 ### Installazione
 
 1. **Clona il repository:**
-
-    ```bash
-    git clone https://github.com/tuo_nome_utente/fc-25-bot.git
-    cd fc-25-bot
-    ```
 
 2. **Installa le dipendenze:**
 

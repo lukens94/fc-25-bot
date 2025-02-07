@@ -1,9 +1,15 @@
 import type {Context} from "grammy";
 import {bot} from "./config";
 import {COMMANDS, getStrings, MY_USER_ID, WELCOME_TEXT} from "./utils";
-import {sendMessage, sendStats, sendRanking, sendPlayerSelectionKeyboard, deleteCommandMessage} from "./methods";
+import {
+    sendMessage,
+    sendStats,
+    sendRanking,
+    sendPlayerSelectionKeyboard,
+    deleteCommandMessage,
+    sendShit
+} from "./methods";
 import {hydrateReply} from "@grammyjs/parse-mode";
-import {sendShit} from "./methods/send_shit";
 
 bot.use(hydrateReply);
 (async () => {

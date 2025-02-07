@@ -32,5 +32,6 @@ export const COMMANDS = {
     STATISTICHE: 'statistiche',
     INSERISCI: 'inserisci',
     CHI_SONO: 'chi_sono',
+    INSULTO: 'insulto',
 };
 

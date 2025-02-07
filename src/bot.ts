@@ -3,6 +3,7 @@ import {bot} from "./config";
 import {COMMANDS, getStrings, MY_USER_ID, WELCOME_TEXT} from "./utils";
 import {sendMessage, sendStats, sendRanking, sendPlayerSelectionKeyboard, deleteCommandMessage} from "./methods";
 import {hydrateReply} from "@grammyjs/parse-mode";
+import {sendShit} from "./methods/send_shit";
 
 bot.use(hydrateReply);
 (async () => {
@@ -38,6 +39,10 @@ const handleCommand = async (ctx: Context, command: string) => {
         case COMMANDS.STATISTICHE:
             console.log('Invio le statistiche...');
             await sendStats(chatId!);
+            break;
+        case COMMANDS.INSULTO:
+            console.log('Invio insulto...');
+            await sendShit(chatId!);
             break;
         case COMMANDS.INSERISCI:
             if (chatId === MY_USER_ID) {

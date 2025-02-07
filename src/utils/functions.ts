@@ -19,10 +19,10 @@ export const getPositionEmoji = (index: number) => {
     }
 }
 
-export const getUsers = async (): Promise<{ id: string; username: string }[]> => {
+export const getUsers = async (): Promise<{ id: string; username: string; tag_name: string; }[]> => {
     const { data, error } = await supabase
         .from('users')
-        .select('id, username');
+        .select('id, username, tag_name');
 
     if (error) {
         console.error("Errore nel recupero utenti da Supabase:", error);

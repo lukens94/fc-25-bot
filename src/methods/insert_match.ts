@@ -26,12 +26,11 @@ export const insertMatch = async (resultData: ResultMatch[]) => {
 
             updatedData.matches = updatedData.win + updatedData.lose + updatedData.draw;
             updatedData.points = updatedData.win * 3 + updatedData.draw;
-            updatedData.efficiency = `${((updatedData.points / (updatedData.matches * 3)) * 100).toFixed(1).replace(".",",")}%`;
+            updatedData.efficiency = `${((updatedData.points / (updatedData.matches * 3)) * 100).toFixed(1).replace(".", ",")}%`;
 
             const {error} = await supabase
                 .from('users')
-                .update(updatedData)
-                .eq('id', id);
+                .upsert({id, ...updatedData})
 
             if (error) {
                 console.error('Errore nell\'aggiornamento dei dati utente:', error);
